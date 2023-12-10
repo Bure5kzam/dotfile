@@ -37,7 +37,7 @@ else
   mkdir -p $HOME/.config-backup
   
   # 중복된 파일을 .config-backup으로 이동
-  config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} $HOME/.config-backup/{}
+  config checkout 2>&1 | egrep "\s+" | awk {'print $1'} | xargs -I{} mv {} $HOME/.config-backup/{}
 fi
 
 config checkout
