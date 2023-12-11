@@ -34,7 +34,7 @@ else
   echo "Backing up pre-existing dot files."
   BACKUP_DIR=dotfiles_backup
   # 중복된 파일 백업 폴더 생성
-  mkdir -p $HOME/$BACKUP_DIR
+  mkdir -p $HOME/$BACKUP_DIR/$DATE
   
   # 중복된 파일을 .config-backup으로 이동
   config checkout 2>&1 | egrep "^\s+.*" | awk {'print $1'} | awk -F '/' {' print $1 '} | xargs -I{} mv {} $HOME/$BACKUP_DIR/$DATE/{}
