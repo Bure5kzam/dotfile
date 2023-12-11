@@ -2,7 +2,7 @@
 
 # URL_GIT_DOTFILE_REPO 변수에 저장된 값 가져오기
 REPO_URL=${URL_GIT_DOTFILE_REPO:-https://github.com/Bure5kzam/dotfile.git}
-TODAY=$(TODAY +%Y-%m-%d_%H-%M-%S)
+TODAY=$(DATE +%Y-%m-%d_%H-%M-%S)
 cd $HOME
 
 # 이미 .cfg 디렉토리가 존재하는지 확인
